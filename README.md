@@ -4,15 +4,15 @@ Sistema completo para monitoramento de consumo de água usando ESP32, sensor de 
 
 ## 📋 Características
 
-- ✅ Monitoramento em tempo real do consumo de água
-- ✅ Visualização por períodos: Dia, Semana, Mês, Ano
-- ✅ Gráficos interativos com Chart.js
-- ✅ Dark Mode
-- ✅ Relatórios em PDF
-- ✅ Autenticação com JWT
-- ✅ Interface responsiva
+-  Monitoramento em tempo real do consumo de água
+-  Visualização por períodos: Dia, Semana, Mês, Ano
+-  Gráficos interativos com Chart.js
+-  Dark Mode
+-  Relatórios em PDF
+-  Autenticação com JWT
+-  Interface responsiva
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 ### Backend
 - Node.js + Express
@@ -32,7 +32,7 @@ Sistema completo para monitoramento de consumo de água usando ESP32, sensor de 
 - Sensor de vazão YF-S201
 - WiFi
 
-## 📦 Instalação
+##  Instalação
 
 ### 1. Backend
 
@@ -52,7 +52,7 @@ npm install
 
 Certifique-se de que o MongoDB está instalado e rodando na porta padrão (27017).
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### 1. Iniciar o Backend
 
@@ -99,12 +99,12 @@ O frontend estará disponível em `http://localhost:5173` (ou outra porta dispon
 
 **Nota**: O sensor é conectado em série no encanamento. O fluxo de água faz girar uma turbina que gera pulsos elétricos.
 
-## 👤 Credenciais de Login
+##  Credenciais de Login
 
 - **Usuário**: `Ducher Andre`
 - **Senha**: `12345`
 
-## 📊 Funcionalidades
+##  Funcionalidades
 
 ### Dashboard
 
@@ -121,7 +121,7 @@ O frontend estará disponível em `http://localhost:5173` (ou outra porta dispon
 - `GET /api/consumo/:deviceId` - Obter consumo por período (requer autenticação)
 - `GET /api/historico/:deviceId?periodo=dia|semana|mes|ano|tudo` - Histórico (requer autenticação)
 
-## 🔍 Calibração do Sensor
+##  Calibração do Sensor
 
 O sensor YF-S201 geralmente precisa de calibração. O valor padrão é 450 pulsos por litro, mas pode variar.
 
@@ -130,7 +130,7 @@ Para calibrar:
 2. Observe quantos pulsos foram contados
 3. Ajuste a constante `Pulses_Per_Liter` no código do ESP32
 
-## ⚠️ Solução de Problemas
+##  Solução de Problemas
 
 ### Backend não conecta ao MongoDB
 - Verifique se o MongoDB está rodando: `mongod`
@@ -152,7 +152,7 @@ Para calibrar:
 - Se não conseguir sincronizar, ajuste o fuso horário em `gmtOffset_sec`
 - Verifique se há conexão com a internet para NTP
 
-## 📝 Notas Importantes
+##  Notas Importantes
 
 1. O ESP32 acumula o total de litros desde o início da execução. Se reiniciar o ESP32, o total acumulado será zerado.
 2. O timestamp é sincronizado via NTP. Se não houver internet, será usado um timestamp aproximado.
