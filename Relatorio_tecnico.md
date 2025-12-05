@@ -334,5 +334,3 @@ unsigned long timestampUnix = (unsigned long)now;
 > Observação: a lista acima depende da implementação usada (ESP-IDF, Arduino Core for ESP32, PlatformIO). Ajuste conforme sua toolchain.
 
 
-**Colaborador:** 
-agaspar19
